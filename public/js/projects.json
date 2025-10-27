@@ -1,0 +1,21 @@
+{
+  "projects": [
+    {
+      "title": "Comparative Titles Finder",
+      "description": "A full-stack web app that helps authors and publishing professionals generate comparative book titles (\"comps\") using a secure connection to the Hardcover API.",
+      "image": "assets/comps-finder.png",
+      "tags": ["JS", "HTML/CSS", "API Integration"],
+      "demoLink": "https://compfinder.netlify.app/",
+      "repoLink": "https://github.com/Fenella-O/Hardcover-Comparative-Title-Finder"
+    },
+
+    {
+      "title": "Backend Web Documentation",
+      "description": "Improved the backend documentation for the UTC Website and onboarding process, making it easier for new web developers to start.",
+      "image": "assets/andras-vas-Bd7gNnWJBkU-unsplash.jpg",
+      "tags": ["Docker", "Documentation", "Homebrew", "ZSH"],
+      "demoLink": "",
+      "repoLink": ""
+    }
+  ]
+}

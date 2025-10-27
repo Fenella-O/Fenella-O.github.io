@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-beige: #f7e6ca;
+  --color-dark-blue: #02365c;
+  --color-dark-red: #5d200e;
+  --color-brown: #b29688;
+  --color-light-blue: #366dfc;
+  --color-light-red: #c1431d;
+  --color-dark: #010f19;
+  --font-header: "Lora", serif;
+  --font-main: "Nunito Sans", sans-serif;
+}
+@layer base {
+  * {
+    @apply font-main text-white;
+  }
+  body {
+    @apply h-screen w-screen bg-linear-to-b from-dark-blue to-dark flex flex-col bg-no-repeat bg-dark overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-header;
+  }
+  h1 {
+    @apply text-7xl font-bold;
+  }
+  h2 {
+    @apply text-5xl mb-5;
+  }
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply border-b-2 border-b-light-blue w-25 text-center bg-linear-to-t from-light-blue from-50% to-50% to-transparent bg-size-[100%_200%] bg-top transition-[background-position_0.5s_ease-in-out] hover:bg-bottom h-8 leading-8;
+  }
+  .text-card {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 60%;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+
+    color: #fff;
+    background: var(--color-dark);
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 1em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px; /*negative border width*/
+      border-radius: inherit;
+      background: linear-gradient(
+        to right,
+        var(--color-light-blue),
+        var(--color-light-red)
+      );
+    }
+  }
+  .skill-card {
+    @apply text-center flex flex-col  justify-center bg-dark text-xl gap-6 h-40 w-40 duration-500 relative rounded-lg p-4  hover:-translate-y-2 hover:shadow-xl shadow-dark-blue;
+  }
+  .project-item {
+    @apply border-light-blue border-2 p-6 rounded-lg shadow-lg duration-500 hover:shadow-xl shadow-dark-blue mb-10;
+  }
+  .tag {
+    @apply bg-light-blue text-white px-3 py-1 rounded-full mr-2;
+  }
+  .project-link {
+    @apply text-xl bg-linear-to-br from-light-red  to-dark-red rounded-xl  transition-colors duration-300 px-3 py-1 bg-clip-text text-transparent font-extrabold border-light-red border-2 hover:bg-clip-border hover:border-transparent hover:text-white;
+  }
+}
